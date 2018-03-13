@@ -1,5 +1,6 @@
 #!/bin/bash
-CPUALERT=1.01 #available precent left
+source settings.conf #import thresholds
+
 getCPU=$(cat /proc/loadavg | awk '{print $1}')
 #Have to use bc cos floating point comparison
 if (( $(echo "$getCPU > $CPUALERT" | bc -l) )); then

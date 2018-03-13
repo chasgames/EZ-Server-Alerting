@@ -1,5 +1,7 @@
 #!/bin/bash
-RAMALERT=8 #available precent left
+
+source settings.conf #import thresholds
+
 availRAM=$(awk '/^Mem/ {printf("%u", 100*$7/$2);}' <(free -m))
    if [ $availRAM -le $RAMALERT ]; then
 ntfy send "$(
