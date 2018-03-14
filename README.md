@@ -1,3 +1,6 @@
+Prerequisites
+apt-get install bc
+
 What is this?
 
 Basic alerting for:
