@@ -1,6 +1,7 @@
 #!/bin/bash
 source settings.conf
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$HEALTHDELAY" -eq 0 ]; then
 #./health/disk.sh
 #./health/ram.sh

@@ -1,0 +1,1 @@
+sed -i 's/HEALTHDELAY=1/HEALTHDELAY=0/g' /opt/EZ-Server-Alerting/settings.conf
