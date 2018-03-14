@@ -7,7 +7,7 @@ There are three parts to this script:
 - 📂 File Integrity (/etc/passwd)
 - 🗝️ SSH Alert (PAM.D Integration)
 
-### Prerequisites
+## Prerequisites
 - Install bc at (apt-get install bc at)
 - Install NTFY (https://github.com/dschep/ntfy)
 
@@ -31,9 +31,9 @@ Confirm NTFY works by typing:
 
 You should recieve the push notification to your device if setup correctly.
 
-### How do I use this?
+## How do I use this?
 
-Part 1 - Health Cronjob
+### Part 1 - Health Cronjob
 
 > su root
 
@@ -45,11 +45,11 @@ Part 1 - Health Cronjob
 
 > */10 * * * * /opt/EZ-Server-Alerting/health_scan.sh >/dev/null 2>&1
 
-Part 2 - File Integrity Cronjob
+### Part 2 - File Integrity Cronjob
 
 TBA
 
-Part 3 - SSH Alert
+### Part 3 - SSH Alert
 
 TBA
 
@@ -57,7 +57,7 @@ TBA
 
 
 
-### What else?
+## What else?
 
 Regular performance of the script looks to be good.
 ```
