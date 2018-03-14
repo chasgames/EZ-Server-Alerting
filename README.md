@@ -1,6 +1,31 @@
-hello
 
-This set of scripts will automatticly setup monitoring and push notifications
-for your severs.
+What is this?
+Simple linux server alerting, which sends push notifications to your device.
 
-Think of it like a more simple (better) OSSEC
+Prerequisites
+- apt-get install bc
+
+How do I use this?
+
+Install NTFY (https://github.com/dschep/ntfy)
+
+```sudo pip install ntfy```
+
+Edit/Create the file /root/.config/ntfy/ntfy.yml
+See NTFY documentation. For example, for pushover. we would put:
+
+ntfy.yml
+```
+backends:
+    - pushover
+pushover:
+    user_key: pastethekeyherefrompushover
+```
+
+Confirm NTFY works by typing:
+```
+ntfy send "test"
+```
+
+You should recieve the push notification to your device if setup correctly.
+
