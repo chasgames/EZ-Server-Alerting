@@ -17,7 +17,7 @@ TBA
 - Install bc at (apt-get install bc at)
 - Install NTFY (https://github.com/dschep/ntfy)
 
-> sudo pip install ntfy
+> sudo pip install ntfy[emoji]
 
 Edit/Create the file /root/.config/ntfy/ntfy.yml
 See NTFY documentation. For example, for pushover. we would put:
