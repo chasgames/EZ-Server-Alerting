@@ -7,6 +7,9 @@ There are three parts to this script:
 - 📂 File Integrity (/etc/passwd)
 - 🗝️ SSH Alert (PAM.D Integration)
 
+Screenshots:
+TBA
+
 
 ---
 
