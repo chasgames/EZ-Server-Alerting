@@ -1,15 +1,17 @@
 
-What is this?
-Simple linux server alerting, which sends push notifications to your device.
+# What is this?
+Simple Linux(🐧) server alerting⏰, which sends push notifications to your devices 📱💻
 
-Prerequisites
-- apt-get install bc
+There are three parts to this script:
+- 👨‍⚕️Health Alerts (CPU,RAM,DISK)
+- 📂 File Integrity (/etc/passwd)
+- 🗝️ SSH Alert (PAM.D Integration)
 
-How do I use this?
+### Prerequisites
+- Install bc at (apt-get install bc at)
+- Install NTFY (https://github.com/dschep/ntfy)
 
-Install NTFY (https://github.com/dschep/ntfy)
-
-```sudo pip install ntfy```
+> sudo pip install ntfy
 
 Edit/Create the file /root/.config/ntfy/ntfy.yml
 See NTFY documentation. For example, for pushover. we would put:
@@ -23,13 +25,34 @@ pushover:
 ```
 
 Confirm NTFY works by typing:
-```
-ntfy send "test"
-```
+
+> ntfy send "test"
+
 
 You should recieve the push notification to your device if setup correctly.
 
-****EXTRAS***
+### How do I use this?
+
+Part 1 - Health Cronjob
+
+> su root
+> cd /opt
+> git clone https://github.com/chasgames/EZ-Server-Alerting
+> */10 * * * * /opt/EZ-Server-Alerting/health_scan.sh >/dev/null 2>&1
+
+Part 2 - File Integrity Cronjob
+
+TBA
+
+Part 3 - SSH Alert
+
+TBA
+
+
+
+
+
+### What else?
 
 Regular performance of the script looks to be good.
 ```
