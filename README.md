@@ -81,3 +81,6 @@ strace -c ./health_scan.sh
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0.000000                   363        42 total
 ```
+
+To debug the errors
+strace -o strace.out -f ./health_scan.sh
