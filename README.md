@@ -12,7 +12,7 @@ Install NTFY (https://github.com/dschep/ntfy)
 ```sudo pip install ntfy```
 
 Edit/Create the file /root/.config/ntfy/ntfy.yml
-Add your backend service as according to NTFY documentation. For example, for pushover. we would put:
+See NTFY documentation. For example, for pushover. we would put:
 
 ntfy.yml
 ```
