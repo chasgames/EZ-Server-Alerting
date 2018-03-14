@@ -1,6 +1,12 @@
-hello
+What is this?
 
-This set of scripts will automatticly setup monitoring and push notifications
-for your severs.
+Basic alerting for:
+- High CPU
+- RAM usage
+- Disk usage
 
-Think of it like a more simple (better) OSSEC
+If alert is met, it will send a push notification to your device using NTFY
+
+How do I use this?
+
+Install NTFY
