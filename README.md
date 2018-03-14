@@ -36,8 +36,13 @@ You should recieve the push notification to your device if setup correctly.
 Part 1 - Health Cronjob
 
 > su root
+
 > cd /opt
+
 > git clone https://github.com/chasgames/EZ-Server-Alerting
+
+> crontab -e
+
 > */10 * * * * /opt/EZ-Server-Alerting/health_scan.sh >/dev/null 2>&1
 
 Part 2 - File Integrity Cronjob
