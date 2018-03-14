@@ -1,6 +1,6 @@
 
 What is this?
-Simple server alerting, which sends push notifications to your device.
+Simple linux server alerting, which sends push notifications to your device.
 
 Prerequisites
 - apt-get install bc
