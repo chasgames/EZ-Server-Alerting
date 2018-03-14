@@ -8,12 +8,12 @@ if [ "$HEALTHDELAY" -eq 0 ]; then
 #./health/disk.sh
 #./health/ram.sh
 #bash ./health/cpu.sh
-my_dir="$(dirname "$0")"
+#my_dir="$(dirname "$0")"
+#echo $my_dir
 
-echo $my_dir
-. $my_dir/health/disk.sh
-. $my_dir/health/ram.sh
-. $my_dir/health/cpu.sh
+. $DIR/health/disk.sh
+. $DIR/health/ram.sh
+. $DIR/health/cpu.sh
 
 # it will execute the script in the current shell without forking a sub shell. this is so we can share the source file
 fi
