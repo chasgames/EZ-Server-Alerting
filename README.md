@@ -1,6 +1,6 @@
-Hello,
+hello
 
-I think there should be a readme here telling people where to install.
+This set of scripts will automatticly setup monitoring and push notifications
+for your severs.
 
-
-.md is markup fam
+Think of it like a more simple (better) OSSEC
