@@ -7,4 +7,23 @@ Prerequisites
 
 How do I use this?
 
-Install NTFY
+Install NTFY (https://github.com/dschep/ntfy)
+
+Edit/Create the file /root/.config/ntfy/ntfy.yml
+Add your backend service as according to NTFY documentation. For example, for pushover. we would put:
+
+ntfy.yml
+```
+backends:
+    - pushover
+pushover:
+    user_key: pastethekeyherefrompushover
+```
+
+Confirm NTFY works by typing:
+```
+ntfy send "test"
+```
+
+You should recieve the push notification to your device if setup correctly.
+
