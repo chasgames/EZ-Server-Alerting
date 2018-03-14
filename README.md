@@ -7,6 +7,9 @@ There are three parts to this script:
 - 📂 File Integrity (/etc/passwd)
 - 🗝️ SSH Alert (PAM.D Integration)
 
+
+---
+
 ## Prerequisites
 - Install bc at (apt-get install bc at)
 - Install NTFY (https://github.com/dschep/ntfy)
@@ -30,6 +33,9 @@ Confirm NTFY works by typing:
 
 
 You should recieve the push notification to your device if setup correctly.
+
+
+---
 
 ## How do I use this?
 
@@ -56,6 +62,9 @@ TBA
 
 
 
+
+
+---
 
 ## What else?
 
@@ -112,3 +121,6 @@ strace -c ./health_scan.sh
 
 To debug the errors
 strace -o strace.out -f ./health_scan.sh
+
+To debug cronjob not working
+> */10 * * * * /opt/EZ-Server-Alerting/health_scan.sh >> /opt/EZ-Server-Alerting/error.log 2>&1
