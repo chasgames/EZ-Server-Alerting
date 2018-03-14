@@ -1,14 +1,9 @@
-Prerequisites
-apt-get install bc
 
 What is this?
+Simple server alerting, which sends push notifications to your device.
 
-Basic alerting for:
-- High CPU
-- RAM usage
-- Disk usage
-
-If alert is met, it will send a push notification to your device using NTFY
+Prerequisites
+- apt-get install bc
 
 How do I use this?
 
