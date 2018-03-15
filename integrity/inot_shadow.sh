@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mypidfile=/tmp/mrlocky.pid
+mypidfile=/tmp/EZ-Server-Alerting-integrity-two.pid
+firsttimerun=/var/tmp/EZ-Server-Alerting-integrity-two
 
 if [ -e $mypidfile ]; then
   echo "script is already running"
@@ -13,19 +14,18 @@ trap "rm -f -- '$mypidfile'" EXIT
 # Create a file with current PID to indicate that process is running.
 echo $$ > "$mypidfile"
 
-if [ "$FIRSTRUN" -eq 1 ]; then
-cp /etc/passwd /var/tmp/alerting-comp-pw
-    sed -i 's/FIRSTRUN=1/FIRSTRUN=0/g' settings.conf
+if ! [ -e $firsttimerun ]; then
+ cp /etc/shadow $firsttimerun
 fi
+
 
 while inotifywait -e attrib /etc/shadow; do
 
 ntfy send "$(
-echo ":poultry_leg: /etc/shadow has changed, New user has been added or something has changed about a user"
-echo -e "The differences:\n"
-grep -Fxvf /var/tmp/alerting-shadow-pw /etc/shadow
+echo ":key: /etc/shadow has changed, New user has been added or something has changed about a user"
+echo -e "The differences:\\n"
+grep -Fxvf $firsttimerun /etc/shadow
 )"
 
-cp /etc/passwd /var/tmp/alerting-comp-pw
-#    awk -F: '($3 >= 1000) {print $1}' /etc/passwd | xargs -I{} passwd -S {} | awk '{print $1,$3}'
+cp /etc/shadow $firsttimerun 
 done
