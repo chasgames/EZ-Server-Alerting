@@ -19,12 +19,13 @@ if ! [ -e $firsttimerun ]; then
 fi
 
 
+#we could use modify or close_write instead to avoid duplicates
 while inotifywait -e attrib /etc/passwd; do
 
 ntfy send "$(
 echo ":key: /etc/passwd has changed, New user has been added or something has changed about a user"
 echo -e "The differences:\\n"
-grep -Fxvf $firsttimerun /etc/passwd
+diff $firsttimerun /etc/passwd
 )"
 
 cp /etc/passwd $firsttimerun 

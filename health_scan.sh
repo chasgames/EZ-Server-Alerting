@@ -1,19 +1,19 @@
 #!/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/EZ-Server-Alerting
-#ntfy send "test omg 1min"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+echo "1"
+PATH=/usr/local/bin:/bin:/usr/bin:$DIR
 source settings.conf
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$HEALTHDELAY" -eq 0 ]; then
-#./health/disk.sh
-#./health/ram.sh
-#bash ./health/cpu.sh
-#my_dir="$(dirname "$0")"
-#echo $my_dir
-
-. $DIR/health/disk.sh
-. $DIR/health/ram.sh
-. $DIR/health/cpu.sh
+. ./health/disk.sh
+. ./health/ram.sh
+. ./health/cpu.sh
+echo "done health checks"
+integrity/inot_passwd.sh &
+echo "what"
+integrity/inot_shadow.sh &
+echo "what2"
 
 # it will execute the script in the current shell without forking a sub shell. this is so we can share the source file
 fi

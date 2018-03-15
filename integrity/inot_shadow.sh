@@ -24,7 +24,7 @@ while inotifywait -e attrib /etc/shadow; do
 ntfy send "$(
 echo ":key: /etc/shadow has changed, New user has been added or something has changed about a user"
 echo -e "The differences:\\n"
-grep -Fxvf $firsttimerun /etc/shadow
+diff $firsttimerun /etc/shadow
 )"
 
 cp /etc/shadow $firsttimerun 
