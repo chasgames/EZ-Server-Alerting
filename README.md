@@ -4,7 +4,7 @@ Simple Linux(🐧) server alerting⏰, which sends push notifications to your de
 
 There are three parts to this script:
 - 👨‍⚕️Health Alerts (CPU,RAM,DISK)
-- 📂 File Integrity (/etc/passwd)
+- 📂 File Integrity (/etc/passwd) will change to inotifywait
 - 🗝️ SSH Alert (PAM.D Integration)
 
 Screenshots:
