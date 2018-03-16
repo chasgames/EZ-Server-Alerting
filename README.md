@@ -42,8 +42,6 @@ You should recieve the push notification to your device if setup correctly.
 
 ## How do I use this?
 
-### Part 1 - Health Cronjob
-
 > su root
 
 > cd /opt
@@ -54,11 +52,8 @@ You should recieve the push notification to your device if setup correctly.
 
 > */10 * * * * /opt/EZ-Server-Alerting/health_scan.sh >/dev/null 2>&1
 
-### Part 2 - File Integrity Cronjob
 
-TBA
-
-### Part 3 - SSH Alert
+For SSH Alerts we directly want to implement with PAM.d
 
 TBA
 
