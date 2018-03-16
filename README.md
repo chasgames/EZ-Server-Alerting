@@ -14,7 +14,8 @@ TBA
 ---
 
 ## Prerequisites
-- Install bc at (apt-get install bc at)
+- Requires to run as root user (Monitors critical files)
+- Install bc at packages (apt-get install bc at)
 - Install NTFY (https://github.com/dschep/ntfy)
 
 > sudo pip install ntfy[emoji]
