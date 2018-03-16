@@ -1,6 +1,6 @@
 
 # What is this?
-Simple Linux(🐧) server alerting⏰, which sends push notifications to your devices 📱💻
+Simple Linux(🐧) server alerting, which sends push notifications to your devices 📱💻
 
 There are three parts to this script:
 - 👨‍⚕️Health Alerts (CPU,RAM,DISK)
